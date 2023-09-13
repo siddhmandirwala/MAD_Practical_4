@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="fun1()">Alert Box</button>
+    <br><br>
+    <button onclick="fun2()">Confirm Box</button>
+    <br><br>
+    <button onclick="fun3()">Prompt Box</button>
+    <p id="box"></p>
+    <script>
+        function fun1() {
+            alert("This is a Alert Box!!")
+        }
+        function fun2() {
+            var str;
+            if (confirm("Press a button.")) {
+                txt = "You pressed OK."
+            } else {
+                txt = "You pressed Cancel."
+            }
+            document.getElementById("box").innerHTML = txt;
+        }
+        function fun3() {
+            let person = prompt("Please Enter your Name :", "abc")
+            var txt;
+            if (person == null || person == "") {
+                txt = "User Cancelled the Prompt!"
+            } else {
+                txt = "Hello " + person;
+            }
+            document.getElementById("box").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>
